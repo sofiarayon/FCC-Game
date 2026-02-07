@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://db0wf8wprync4"]
+
+[ext_resource type="Texture2D" uid="uid://0006ajfvjnkh" path="res://Entities/Player/player_simple.png" id="1_mv1ah"]
+[ext_resource type="Script" uid="uid://d22f2vam0hv61" path="res://Entities/Player/player_simple.gd" id="2_3uyv8"]
+
+[node name="Player" type="Node2D" unique_id=1282730418]
+
+[node name="PlayerSimple" type="Sprite2D" parent="." unique_id=1424756544]
+texture_filter = 1
+texture = ExtResource("1_mv1ah")
+script = ExtResource("2_3uyv8")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerSimple" unique_id=1720718095]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
