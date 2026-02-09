@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://db0wf8wprync4"]
+
+[ext_resource type="Texture2D" uid="uid://cerq7n3o0oiuv" path="res://Entities/Student/ExamplePlayerSprite.png" id="1_gtyoi"]
+[ext_resource type="Script" uid="uid://d22f2vam0hv61" path="res://Entities/Student/Student.gd" id="2_3uyv8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtyoi"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(280, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kme5w"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(320, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xepsj"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(360, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa0ow"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(640, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cs8o"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(680, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfmbx"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(720, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anfst"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(760, 0, 40, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nelqo"]
+atlas = ExtResource("1_gtyoi")
+region = Rect2(800, 0, 40, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kme5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtyoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kme5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xepsj")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa0ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cs8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfmbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anfst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nelqo")
+}],
+"loop": true,
+"name": &"side",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtyoi"]
+radius = 13.0
+
+[node name="Student" type="CharacterBody2D" unique_id=1235078440]
+
+[node name="Student" type="AnimatedSprite2D" parent="." unique_id=526789533]
+texture_filter = 1
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_kme5w")
+animation = &"side"
+autoplay = "side"
+script = ExtResource("2_3uyv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310116806]
+position = Vector2(-1, 10)
+shape = SubResource("CircleShape2D_gtyoi")
