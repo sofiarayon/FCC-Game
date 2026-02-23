@@ -49,7 +49,7 @@ func play_walk(dir: Vector2) -> void:
 		else:
 			_set_anim("walk_down")
 			
-func _set_anim(name: String) -> void:
-	if student.animation == name and student.is_playing():
+func _set_anim(anim_name: String) -> void:
+	if student.animation == anim_name and student.is_playing():
 		return
-	student.play(name)
+	student.play(anim_name)
