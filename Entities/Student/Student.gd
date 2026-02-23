@@ -1,20 +1,55 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 
-var direction: Vector2 = Vector2(1,0)
-var speed: int = 2
+var direction: Vector2 = Vector2.ZERO
+var last_dir: Vector2 = Vector2.DOWN
+
+var speed: float = 150
+
+@onready var student: AnimatedSprite2D = $Student
+
+func _ready() -> void:
+	_set_anim("idle_down")
 
 func _physics_process(_delta: float) -> void:
 	direction = Input.get_vector("left", "right", "up", "down")
 	
-	position += direction * speed
+	velocity = direction * speed
+	move_and_slide()
+	
+	if direction != Vector2.ZERO:
+		last_dir = direction
+		
 	animation()
 	
-func animation():
-	if direction:
-		if direction.x < 0:
-			$".".flip_h = true
-		else:
-			$".".flip_h = false
-		
+func animation() -> void:
+	if direction == Vector2.ZERO:
+		play_idle()
 	else:
-		$".".frame = 0
+		play_walk(direction)
+
+func play_idle() -> void:
+	if abs(last_dir.x) > abs(last_dir.y):
+		_set_anim("idle_side")
+		student.flip_h = (last_dir.x < 0)
+	else:
+		student.flip_h = false
+		if last_dir.y < 0:
+			_set_anim("idle_up")
+		else:
+			_set_anim("idle_down")
+
+func play_walk(dir: Vector2) -> void:
+	if abs(dir.x) > abs(dir.y):
+		_set_anim("side")
+		student.flip_h = (dir.x < 0)
+	else:
+		student.flip_h = false
+		if dir.y < 0:
+			_set_anim("walk_up")
+		else:
+			_set_anim("walk_down")
+			
+func _set_anim(name: String) -> void:
+	if student.animation == name and student.is_playing():
+		return
+	student.play(name)
