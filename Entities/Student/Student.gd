@@ -19,13 +19,13 @@ func _physics_process(_delta: float) -> void:
 	if direction != Vector2.ZERO:
 		last_dir = direction
 		
-	animation()
+	update_animation()
 	
-func animation() -> void:
+func update_animation() -> void:
 	if direction == Vector2.ZERO:
 		play_idle()
 	else:
-		play_walk(direction)
+		play_walk()
 
 func play_idle() -> void:
 	if abs(last_dir.x) > abs(last_dir.y):
@@ -38,13 +38,13 @@ func play_idle() -> void:
 		else:
 			_set_anim("idle_down")
 
-func play_walk(dir: Vector2) -> void:
-	if abs(dir.x) > abs(dir.y):
+func play_walk() -> void:
+	if abs(direction.x) > abs(direction.y):
 		_set_anim("side")
-		student.flip_h = (dir.x < 0)
+		student.flip_h = (direction.x < 0)
 	else:
 		student.flip_h = false
-		if dir.y < 0:
+		if direction.y < 0:
 			_set_anim("walk_up")
 		else:
 			_set_anim("walk_down")

@@ -48,6 +48,11 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="student"
+2d_physics/layer_5="walls"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

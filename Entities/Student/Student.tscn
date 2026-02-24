@@ -194,6 +194,8 @@ animations = [{
 radius = 13.0
 
 [node name="Student" type="CharacterBody2D" unique_id=1235078440]
+motion_mode = 1
+wall_min_slide_angle = 0.34906584
 script = ExtResource("2_3uyv8")
 
 [node name="Student" type="AnimatedSprite2D" parent="." unique_id=526789533]
@@ -205,3 +207,5 @@ animation = &"idle_side"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310116806]
 position = Vector2(-1, 10)
 shape = SubResource("CircleShape2D_gtyoi")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=763554826]
