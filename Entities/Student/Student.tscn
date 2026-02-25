@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cerq7n3o0oiuv" path="res://Entities/Student/ExamplePlayerSprite.png" id="1_gtyoi"]
 [ext_resource type="Script" uid="uid://d22f2vam0hv61" path="res://Entities/Student/Student.gd" id="2_3uyv8"]
+[ext_resource type="Script" uid="uid://jgq2tq8bxn2w" path="res://Entities/Student/CameraStudent.gd" id="3_tcomn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6psx"]
 atlas = ExtResource("1_gtyoi")
@@ -209,3 +210,4 @@ position = Vector2(-1, 10)
 shape = SubResource("CircleShape2D_gtyoi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=763554826]
+script = ExtResource("3_tcomn")
