@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duq0k5bqfiesf"
-path="res://.godot/imported/Grass-01.png-a1610a44a354a6dda9916a673d0f1305.ctex"
+uid="uid://c5x4xmrsuui4t"
+path="res://.godot/imported/parking_lot.png-349067ade36460e0a9b06d78b347a035.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/Background/Grass-01.png"
-dest_files=["res://.godot/imported/Grass-01.png-a1610a44a354a6dda9916a673d0f1305.ctex"]
+source_file="res://Stages/Background/parking_lot.png"
+dest_files=["res://.godot/imported/parking_lot.png-349067ade36460e0a9b06d78b347a035.ctex"]
 
 [params]
 
