@@ -21,9 +21,10 @@ LevelManager="*uid://cuin3qwpbwiia"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [input]
 
@@ -55,7 +56,7 @@ down={
 [layer_names]
 
 2d_physics/layer_1="student"
-2d_physics/layer_5="walls"
+2d_physics/layer_2="buildings"
 
 [physics]
 
