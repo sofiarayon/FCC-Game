@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvajm0js3i3cd"
-path="res://.godot/imported/props.png-5d53c7261ae1c1bb7d5d2849ee2d6afd.ctex"
+uid="uid://bge4fin1oe74h"
+path="res://.godot/imported/vehicles.png-0b4db5be7bf7ddecdbf21569d20bdf80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/Background/props.png"
-dest_files=["res://.godot/imported/props.png-5d53c7261ae1c1bb7d5d2849ee2d6afd.ctex"]
+source_file="res://Assets/vehicles.png"
+dest_files=["res://.godot/imported/vehicles.png-0b4db5be7bf7ddecdbf21569d20bdf80.ctex"]
 
 [params]
 

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c41n8w2esdtdg"]
+
+[ext_resource type="Script" uid="uid://ct53vv1q47jlq" path="res://Scenes/UI/campus_map.gd" id="1_1do5l"]
+
+[node name="CampusMap" type="CanvasLayer" unique_id=974481198]
+script = ExtResource("1_1do5l")
+
+[node name="MapButton" type="Button" parent="." unique_id=1057041148]
+anchors_preset = -1
+offset_left = 776.0
+offset_top = 32.0
+offset_right = 818.0
+offset_bottom = 63.0
+text = "Map"
+
+[node name="MapPanel" type="Panel" parent="." unique_id=1877118094]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = 88.0
+offset_right = -16.0
+offset_bottom = 208.0
+grow_horizontal = 0
+
+[node name="LButton" type="Button" parent="MapPanel" unique_id=272141403]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 72.0
+offset_right = 190.0
+offset_bottom = 103.0
+text = "Linganore"
+
+[node name="CloseButton" type="Button" parent="MapPanel" unique_id=2114454734]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 202.0
+offset_bottom = 31.0
+text = "Close"
+
+[node name="HButton" type="Button" parent="MapPanel" unique_id=1006223336]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Student Center"
+
+[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="pressed" from="MapPanel/LButton" to="." method="_on_l_button_pressed"]
+[connection signal="pressed" from="MapPanel/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MapPanel/HButton" to="." method="_on_h_button_pressed"]

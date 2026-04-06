@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5x4xmrsuui4t"
-path="res://.godot/imported/parking_lot.png-349067ade36460e0a9b06d78b347a035.ctex"
+uid="uid://bvajm0js3i3cd"
+path="res://.godot/imported/props.png-17ed1381daf1075fbfc48c8a607482a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/Background/parking_lot.png"
-dest_files=["res://.godot/imported/parking_lot.png-349067ade36460e0a9b06d78b347a035.ctex"]
+source_file="res://Assets/props.png"
+dest_files=["res://.godot/imported/props.png-17ed1381daf1075fbfc48c8a607482a8.ctex"]
 
 [params]
 

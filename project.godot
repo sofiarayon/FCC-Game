@@ -13,11 +13,11 @@ config_version=5
 config/name="FCC game"
 run/main_scene="uid://omodv5pacfue"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
-LevelManager="*uid://cuin3qwpbwiia"
+WorldBoundsManager="*uid://cuin3qwpbwiia"
+SceneManager="*uid://lqhm1gunqc1v"
 
 [display]
 
