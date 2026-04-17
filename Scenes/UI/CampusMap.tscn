@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c41n8w2esdtdg"]
 
 [ext_resource type="Script" uid="uid://ct53vv1q47jlq" path="res://Scenes/UI/campus_map.gd" id="1_1do5l"]
+[ext_resource type="Texture2D" uid="uid://d22ugdftdiald" path="res://Assets/map.png" id="2_n3w15"]
 
 [node name="CampusMap" type="CanvasLayer" unique_id=974481198]
 script = ExtResource("1_1do5l")
 
 [node name="MapButton" type="Button" parent="." unique_id=1057041148]
-anchors_preset = -1
 offset_left = 776.0
 offset_top = 32.0
 offset_right = 818.0
@@ -14,37 +14,50 @@ offset_bottom = 63.0
 text = "Map"
 
 [node name="MapPanel" type="Panel" parent="." unique_id=1877118094]
-anchors_preset = -1
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -224.0
-offset_top = 88.0
-offset_right = -16.0
-offset_bottom = 208.0
+offset_left = -896.0
+offset_top = 80.0
+offset_right = -104.0
+offset_bottom = 480.0
 grow_horizontal = 0
-
-[node name="LButton" type="Button" parent="MapPanel" unique_id=272141403]
-layout_mode = 0
-offset_left = 104.0
-offset_top = 72.0
-offset_right = 190.0
-offset_bottom = 103.0
-text = "Linganore"
 
 [node name="CloseButton" type="Button" parent="MapPanel" unique_id=2114454734]
 layout_mode = 0
-offset_left = 152.0
-offset_right = 202.0
-offset_bottom = 31.0
+offset_left = 352.0
+offset_top = 8.0
+offset_right = 402.0
+offset_bottom = 39.0
 text = "Close"
+
+[node name="TextureRect" type="TextureRect" parent="MapPanel" unique_id=377982403]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = 24.0
+offset_right = 784.0
+offset_bottom = 384.0
+texture = ExtResource("2_n3w15")
+expand_mode = 1
 
 [node name="HButton" type="Button" parent="MapPanel" unique_id=1006223336]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 136.0
+offset_top = 184.0
+offset_right = 262.0
+offset_bottom = 215.0
 text = "Student Center"
 
+[node name="LButton" type="Button" parent="MapPanel" unique_id=272141403]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 216.0
+offset_right = 526.0
+offset_bottom = 247.0
+text = "Linganore"
+
 [connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
-[connection signal="pressed" from="MapPanel/LButton" to="." method="_on_l_button_pressed"]
 [connection signal="pressed" from="MapPanel/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="MapPanel/HButton" to="." method="_on_h_button_pressed"]
+[connection signal="pressed" from="MapPanel/LButton" to="." method="_on_l_button_pressed"]
