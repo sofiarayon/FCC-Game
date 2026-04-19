@@ -1,60 +1,95 @@
 [gd_scene format=3 uid="uid://c41n8w2esdtdg"]
 
 [ext_resource type="Script" uid="uid://ct53vv1q47jlq" path="res://Scenes/UI/campus_map.gd" id="1_1do5l"]
-[ext_resource type="Texture2D" uid="uid://d22ugdftdiald" path="res://Assets/map.png" id="2_n3w15"]
+[ext_resource type="Texture2D" uid="uid://bpn14iogdlnfx" path="res://Scenes/UI/ui.png" id="2_fjmfm"]
+[ext_resource type="StyleBox" uid="uid://bkgsxmaipiq44" path="res://Scenes/UI/ui.tres" id="2_ykt77"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aouie"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsuu5"]
+texture = SubResource("CompressedTexture2D_aouie")
+region_rect = Rect2(560, 46, 66, 74)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qctvb"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bheij"]
+texture = SubResource("CompressedTexture2D_qctvb")
+region_rect = Rect2(528, 38, 60, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjmfm"]
+texture = ExtResource("2_fjmfm")
+region_rect = Rect2(0, 0, 452.9999, 236.39995)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ykt77"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aouie"]
+texture = SubResource("CompressedTexture2D_ykt77")
+region_rect = Rect2(482, 96, 28, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tsuu5"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qv4me"]
+texture = SubResource("CompressedTexture2D_tsuu5")
+region_rect = Rect2(514, 98, 28, 30)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fjmfm"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykt77"]
+texture = SubResource("CompressedTexture2D_fjmfm")
+region_rect = Rect2(514, 98, 28, 30)
 
 [node name="CampusMap" type="CanvasLayer" unique_id=974481198]
 script = ExtResource("1_1do5l")
 
 [node name="MapButton" type="Button" parent="." unique_id=1057041148]
-offset_left = 776.0
-offset_top = 32.0
-offset_right = 818.0
-offset_bottom = 63.0
-text = "Map"
+offset_left = 816.0
+offset_top = 416.0
+offset_right = 904.0
+offset_bottom = 520.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tsuu5")
+theme_override_styles/pressed = ExtResource("2_ykt77")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bheij")
 
 [node name="MapPanel" type="Panel" parent="." unique_id=1877118094]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -896.0
-offset_top = 80.0
-offset_right = -104.0
-offset_bottom = 480.0
+offset_left = -880.0
+offset_top = 96.0
+offset_right = -88.0
+offset_bottom = 504.0
 grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fjmfm")
 
 [node name="CloseButton" type="Button" parent="MapPanel" unique_id=2114454734]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 8.0
-offset_right = 402.0
-offset_bottom = 39.0
-text = "Close"
-
-[node name="TextureRect" type="TextureRect" parent="MapPanel" unique_id=377982403]
-texture_filter = 1
-layout_mode = 0
-offset_left = -8.0
-offset_top = 24.0
-offset_right = 784.0
-offset_bottom = 384.0
-texture = ExtResource("2_n3w15")
-expand_mode = 1
+offset_left = 696.0
+offset_top = 72.0
+offset_right = 728.0
+offset_bottom = 104.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_aouie")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qv4me")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ykt77")
 
 [node name="HButton" type="Button" parent="MapPanel" unique_id=1006223336]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 184.0
-offset_right = 262.0
-offset_bottom = 215.0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 206.0
+offset_bottom = 111.0
 text = "Student Center"
 
 [node name="LButton" type="Button" parent="MapPanel" unique_id=272141403]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 216.0
-offset_right = 526.0
-offset_bottom = 247.0
+offset_left = 104.0
+offset_top = 128.0
+offset_right = 190.0
+offset_bottom = 159.0
 text = "Linganore"
 
 [connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]

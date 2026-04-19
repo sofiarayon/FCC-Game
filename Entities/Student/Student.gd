@@ -3,7 +3,7 @@ extends CharacterBody2D
 var direction: Vector2 = Vector2.ZERO
 var last_dir: Vector2 = Vector2.DOWN
 
-var speed: float = 150
+var speed: float = 200
 
 @onready var student: AnimatedSprite2D = $Student
 

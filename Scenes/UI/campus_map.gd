@@ -12,7 +12,7 @@ func _on_close_button_pressed() -> void:
 	map_panel.visible = false
 
 func _on_l_button_pressed() -> void:
-	SceneManager.enter_scene("res://Scenes/Exteriors/L_Exterior.tscn")
+	SceneManager.enter_scene("res://Scenes/Interiors/L_Interior.tscn")
 
 func _on_h_button_pressed() -> void:
 	SceneManager.enter_scene("res://Scenes/Exteriors/H_Exterior.tscn")

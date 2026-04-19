@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cmqvigqgabjsm"]
 
-[ext_resource type="Texture2D" uid="uid://c5x4xmrsuui4t" path="res://Assets/parking_lot.png" id="1_ktclk"]
+[ext_resource type="Texture2D" uid="uid://c5x4xmrsuui4t" path="res://Spritesheets/parking_lot.png" id="1_ktclk"]
 [ext_resource type="PackedScene" uid="uid://db0wf8wprync4" path="res://Entities/Student/Student.tscn" id="2_ub14b"]
 [ext_resource type="PackedScene" uid="uid://c41n8w2esdtdg" path="res://Scenes/UI/CampusMap.tscn" id="3_ub14b"]
 
@@ -86,3 +86,4 @@ tile_set = SubResource("TileSet_568tf")
 position = Vector2(96, 8)
 
 [node name="CampusMap" parent="." unique_id=974481198 instance=ExtResource("3_ub14b")]
+visible = false
