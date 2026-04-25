@@ -5,4 +5,4 @@ load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
 
 [resource]
 texture = SubResource("CompressedTexture2D_qctvb")
-region_rect = Rect2(528, 38, 60, 50)
+region_rect = Rect2(548, 40, 122, 78)
