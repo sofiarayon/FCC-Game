@@ -49,7 +49,7 @@ func _ready() -> void:
 		"L": {
 			"area": $MapPanel/LArea,
 			"label": $MapPanel/LLabel,
-			"scene": "res://Scenes/Interiors/L_Interior.tscn"
+			"scene": "res://Scenes/Interiors/L_Exterior.tscn"
 		},
 		"CTC": {
 			"area": $MapPanel/CTCArea,

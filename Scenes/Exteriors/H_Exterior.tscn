@@ -3207,7 +3207,7 @@ position = Vector2(1388, 8)
 collision_layer = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1167121244]
-position = Vector2(-2, 0)
-polygon = PackedVector2Array(1023, -40, -81, -64, -73, 1536, 3391, 1536, 3399, -32, 1983, -40, 1983, 496, 1023, 496, 1023, 320)
+position = Vector2(160, 0)
+polygon = PackedVector2Array(1023, -40, -81, -64, -73, 1536, 3391, 1536, 3399, -32, 1784, -40, 1784, 208, 1792, 496, 1023, 496, 1023, 320)
 
 [node name="CampusMap" parent="." unique_id=974481198 instance=ExtResource("6_43bw0")]
