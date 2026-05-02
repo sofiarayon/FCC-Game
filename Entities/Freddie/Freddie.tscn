@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cta3fs21j7pfh"]
+
+[ext_resource type="Script" uid="uid://cy36y64qtdksc" path="res://Entities/Freddie/freddie.gd" id="1_i7xvy"]
+[ext_resource type="Texture2D" uid="uid://bbbl1ne06mqyq" path="res://Entities/Freddie/Freddie.png" id="1_o1fvi"]
+[ext_resource type="FontFile" uid="uid://b7f4sjvs50qll" path="res://Assets/dogicapixel.otf" id="3_pcdrt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i7xvy"]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcdrt"]
+size = Vector2(32, 34)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rgqjt"]
+load_path = "res://.godot/imported/ui.png-69b60fd19efbf83749aef4bfbd3beb68.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0st7"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+texture = SubResource("CompressedTexture2D_rgqjt")
+region_rect = Rect2(8, 224, 202, 32)
+
+[node name="Freddie" type="CharacterBody2D" unique_id=567430405]
+script = ExtResource("1_i7xvy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480384373]
+position = Vector2(0, -8)
+texture = ExtResource("1_o1fvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857460366]
+shape = SubResource("CircleShape2D_i7xvy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1757693220]
+z_index = 1
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=303314358]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_pcdrt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1552135484]
+
+[node name="Dialog" type="RichTextLabel" parent="CanvasLayer" unique_id=1844486706]
+offset_left = 496.0
+offset_top = 200.0
+offset_right = 632.0
+offset_bottom = 224.0
+theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.3137255, 1)
+theme_override_fonts/normal_font = ExtResource("3_pcdrt")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_t0st7")
+bbcode_enabled = true
+text = "Welcome to FCC!"
+fit_content = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

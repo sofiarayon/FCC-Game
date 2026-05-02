@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvajm0js3i3cd" path="res://Spritesheets/props.png" id="5_gdgno"]
 [ext_resource type="PackedScene" uid="uid://db0wf8wprync4" path="res://Entities/Student/Student.tscn" id="6_7ridk"]
 [ext_resource type="PackedScene" uid="uid://c41n8w2esdtdg" path="res://Scenes/UI/CampusMap.tscn" id="6_43bw0"]
+[ext_resource type="PackedScene" uid="uid://cta3fs21j7pfh" path="res://Entities/Freddie/Freddie.tscn" id="6_mmi2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgb8l"]
 texture = ExtResource("2_mmi2v")
@@ -1735,6 +1736,13 @@ rendering_quadrant_size = 32
 z_index = 1
 y_sort_enabled = true
 position = Vector2(1388, 8)
+collision_mask = 6
+
+[node name="Freddie" parent="." unique_id=567430405 instance=ExtResource("6_mmi2v")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1336, -64)
+collision_layer = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=627222991]
 collision_layer = 3
